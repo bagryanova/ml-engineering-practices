@@ -1,11 +1,11 @@
-from working_with_data import load_data, analyze_data, preprocess_dataset, get_speakers
-from models import get_RBF_SVM, get_linear_SVM, CNN_Model
-from metrics import calc_metrics
-from utils import set_random_seed
+from .working_with_data import load_data, analyze_data, preprocess_dataset, get_speakers
+from .models import get_RBF_SVM, get_linear_SVM, CNN_Model
+from .metrics import calc_metrics
+from .utils import set_random_seed
 import torch
 from torch.utils.data import DataLoader
-from utils import collate_fn
-from train import train, predict
+from .utils import collate_fn
+from .train import train, predict
 
 
 def main():
