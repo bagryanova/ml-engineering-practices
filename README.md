@@ -14,7 +14,14 @@ Build the package:
 Publish to test.pypi:
 1. Run `twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
 
-Package on pypi: `https://test.pypi.org/project/sound-classifiers/0.0.2/`
+Package on pypi: `https://test.pypi.org/project/sound-classifiers/0.0.6/`
 
 Install from pypi:
-`pip install -i https://test.pypi.org/simple/ sound-classifiers==0.0.2`
+`pip3 install -i https://test.pypi.org/simple/ sound-classifiers==0.0.6 && pip3 install -r requirements.txt`
+
+Run example:
+```
+from sound_classifiers.main import main
+
+main()
+```
