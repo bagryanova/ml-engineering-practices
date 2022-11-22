@@ -2,7 +2,16 @@
 
 Trains different classifiers for voice to male/female classes.
 
-To launch:
+I chose package manager `pip`. Installation guide can be found here https://pip.pypa.io/en/stable/installation/
+
+Tested on OS-X and python 3.9.7
+
+Build the package:
 1. activate venv: `python3 -m venv .venv && source .venv/bin/activate`
-2. install requirements: `pip3 install -r requirements.txt`
-3. run training: python3 main.py
+2. install dev requirements: `pip3 install -r requirements_dev.txt`
+3. Run `python3 setup.py sdist`
+
+Publish to test.pypi:
+1. Run `twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
+
+
