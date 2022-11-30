@@ -2,6 +2,19 @@
 
 Trains different classifiers for voice to male/female classes.
 
+## Formatting and linting
+
+As a formatter I used autopep8 extension for vscode.
+
+Flake8 plugins:
+1. flake8-bandit
+2. flake8-eradicate
+3. flake8-isort
+4. flake8-return
+5. pep8-naming
+
+## Package
+
 I chose package manager `pip`. Installation guide can be found here https://pip.pypa.io/en/stable/installation/
 
 Tested on OS-X and python 3.9.7

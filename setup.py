@@ -1,6 +1,5 @@
 import setuptools
 
-
 setuptools.setup(
     name='sound_classifiers',
     version='0.0.6',

@@ -1,7 +1,9 @@
-import torch
 import random
+
 import numpy as np
+import torch
 import torchaudio
+
 
 def set_random_seed(seed):
     torch.backends.cudnn.deterministic = True
@@ -13,11 +15,17 @@ def set_random_seed(seed):
 
 def pad_sequence(batch):
     batch = [item.t() for item in batch]
-    batch = torch.nn.utils.rnn.pad_sequence(batch, batch_first=True, padding_value=0.)
+    batch = torch.nn.utils.rnn.pad_sequence(
+        batch, batch_first=True, padding_value=0.)
     return batch.permute(0, 2, 1)
 
 
-def collate_fn(batch, speakers, train=False, crop_size=50000, resampled_freq=4000):
+def collate_fn(
+        batch,
+        speakers,
+        train=False,
+        crop_size=50000,
+        resampled_freq=4000):
     tensors = []
     targets = []
 
@@ -28,7 +36,8 @@ def collate_fn(batch, speakers, train=False, crop_size=50000, resampled_freq=400
             w = w[:, st:]
 
         if train:
-            w += np.random.normal(0, torch.std(w).item() / 10, size=w.shape)  # simple augmentation
+            # simple augmentation
+            w += np.random.normal(0, torch.std(w).item() / 10, size=w.shape)
 
         tensors.append(waveform)
         g = int(speakers[s] == 'M')

@@ -1,6 +1,12 @@
+flake8-bandit
+flake8-eradicate
+flake8-isort
+flake8-return
 librosa
 pandas
+pep8-naming
 pip-chill
+pre-commit
 sklearn
 torchaudio
 tqdm
