@@ -1,0 +1,5 @@
+outs:
+- md5: 45a4600acdd7bcfdbb5c3652c0aa5893
+  size: 926374
+  path: rbf_svm.pickle
+  

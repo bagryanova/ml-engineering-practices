@@ -1,0 +1,5 @@
+outs:
+- md5: 184d456218118e941656814548122ab9
+  size: 1596
+  path: linear_svm.pickle
+  

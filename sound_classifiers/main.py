@@ -1,3 +1,5 @@
+import pickle
+
 import torch
 from torch.utils.data import DataLoader
 
@@ -25,6 +27,10 @@ def main():
     rbf_svm = get_rbf_svm()
     rbf_svm = rbf_svm.fit(x_train, y_train)
     rbf_svm_metrics = calc_metrics(y_val, rbf_svm.predict(x_val), 'RBF SVM')
+
+    with open('rbf_svm.pickle', 'wb') as f:
+        pickle.dump(rbf_svm, f)
+
     print(rbf_svm_metrics)
 
     print('Training linear SVM')
@@ -32,6 +38,10 @@ def main():
     linear_svm = linear_svm.fit(x_train, y_train)
     linear_svm_metrics = calc_metrics(
         y_val, linear_svm.predict(x_val), 'Linear SVM')
+
+    with open('linear_svm.pickle', 'wb') as f:
+        pickle.dump(linear_svm, f)
+
     print(linear_svm_metrics)
 
     print('Training CNN')
