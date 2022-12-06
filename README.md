@@ -38,3 +38,7 @@ from sound_classifiers.main import main
 
 main()
 ```
+
+## Working with dvc
+I took only small part of the data because the full vesion would have taken too much place at my gdrive.
+Also it doesn't work on OS-X and I can't fix it.
