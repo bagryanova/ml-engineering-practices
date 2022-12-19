@@ -11,3 +11,4 @@ sklearn
 torchaudio
 tqdm
 twine
+apache-airflow

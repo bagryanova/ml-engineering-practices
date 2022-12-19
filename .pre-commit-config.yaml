@@ -5,7 +5,7 @@ repos:
     - id: flake8
       args:
         - --config=setup.cfg
-        - --ignore=S403
+        - --ignore=S403,S605,S607,S301
       additional_dependencies:
         - flake8-bandit
         - flake8-eradicate

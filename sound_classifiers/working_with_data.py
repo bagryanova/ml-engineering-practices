@@ -25,7 +25,9 @@ def preprocess_dataset(path, dataset):
 
     x = [np.mean(librosa.feature.mfcc(y=np.array(d[0][0]), sr=d[1]), axis=1)
          for d in dataset]
-    y = [0 if speakers.get(d[4]) == 'F' else 1 for d in dataset]
+    x = list(x)
+
+    y = list([0 if speakers.get(d[4]) == 'F' else 1 for d in dataset])
     return x, y
 
 

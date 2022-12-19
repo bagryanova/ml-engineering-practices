@@ -42,3 +42,11 @@ main()
 ## Working with dvc
 I took only small part of the data because the full vesion would have taken too much place at my gdrive.
 Also it doesn't work on OS-X and I can't fix it.
+
+
+## Airflow
+1. Put DAG sound_classifiers.py to your airflow directory: `cp sound_classifiers.py ~/airflow/dags`
+2. Select directory to run in: `export SC_RUN_DIR='/absolute/path/to/here'` e.g. `export SC_RUN_DIR='/Users/bagryanova/Desktop/hse/ml-engineering-practices'`
+3. Run DAG: `python3 main.py airflow`
+
+The DAG runs in this directory for convinience.
