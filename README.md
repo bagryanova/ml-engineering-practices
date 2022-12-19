@@ -49,4 +49,4 @@ Also it doesn't work on OS-X and I can't fix it.
 2. Select directory to run in: `export SC_RUN_DIR='/absolute/path/to/here'` e.g. `export SC_RUN_DIR='/Users/bagryanova/Desktop/hse/ml-engineering-practices'`
 3. Run DAG: `python3 main.py airflow`
 
-The DAG runs in this directory for convinience.
+The DAG runs in this directory for convinience. CNN training is commented out for speed. 
